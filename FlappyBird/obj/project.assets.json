@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\opilane\\source\\repos\\TiTpe21\\FlappyBird\\FlappyBird\\FlappyBird.csproj",
+      "projectUniqueName": "C:\\Users\\opilane\\source\\repos\\Week15-FlappyBird\\FlappyBird\\FlappyBird.csproj",
       "projectName": "FlappyBird",
-      "projectPath": "C:\\Users\\opilane\\source\\repos\\TiTpe21\\FlappyBird\\FlappyBird\\FlappyBird.csproj",
+      "projectPath": "C:\\Users\\opilane\\source\\repos\\Week15-FlappyBird\\FlappyBird\\FlappyBird.csproj",
       "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\opilane\\source\\repos\\TiTpe21\\FlappyBird\\FlappyBird\\obj\\",
+      "outputPath": "C:\\Users\\opilane\\source\\repos\\Week15-FlappyBird\\FlappyBird\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -68,7 +68,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.415\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.416\\RuntimeIdentifierGraph.json"
       }
     }
   }

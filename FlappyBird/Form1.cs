@@ -13,7 +13,8 @@ namespace FlappyBird
     public partial class Form1 : Form
     {
         int gravity = 10;
-        int pipeSpeed = 6;
+        int pipeSpeed = 10;
+        int score = 0;
         public Form1()
         {
             InitializeComponent();
@@ -39,15 +40,23 @@ namespace FlappyBird
             bird.Top += gravity;
             pipeTop.Left -= pipeSpeed;
             pipeBottom.Left -= pipeSpeed;
+            scoreLabel.Text = $"score: {score}";
 
             if(pipeTop.Left < -150)
             {
-                pipeTop.Left = 445;
+                pipeTop.Left = 600;
+                score++;
             }
 
             if (pipeBottom.Left < -130)
             {
-                pipeBottom.Left = 500;
+                pipeBottom.Left = 620;
+                score++;
+            }
+
+            if(bird.Top < -50)
+            {
+                gameOver();
             }
 
             if (bird.Bounds.IntersectsWith(pipeTop.Bounds) || bird.Bounds.IntersectsWith(pipeBottom.Bounds) || bird.Bounds.IntersectsWith(ground.Bounds))
@@ -76,7 +85,7 @@ namespace FlappyBird
         {
             if(e.KeyCode == Keys.Space)
             {
-                gravity = -5;
+                gravity = -8;
             }
         }
 
@@ -84,14 +93,22 @@ namespace FlappyBird
         {
             if (e.KeyCode == Keys.Space)
             {
-                gravity = 5;
+                gravity = 7;
             }
         }
 
         private void gameOver()
         {
             timer1.Stop();
+            scoreLabel.Text = $"Game Over!";
+            playAgain.Visible = true;
         }
 
+        private void playAgain_Click(object sender, EventArgs e)
+        {
+            Form1 NewForm = new Form1();
+            NewForm.Show();
+            this.Dispose(false);
+        }
     }
 }

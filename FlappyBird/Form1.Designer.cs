@@ -36,6 +36,7 @@
             this.bird = new System.Windows.Forms.PictureBox();
             this.scoreLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.playAgain = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pipeBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).BeginInit();
@@ -45,7 +46,7 @@
             // pipeBottom
             // 
             this.pipeBottom.Image = ((System.Drawing.Image)(resources.GetObject("pipeBottom.Image")));
-            this.pipeBottom.Location = new System.Drawing.Point(246, 290);
+            this.pipeBottom.Location = new System.Drawing.Point(443, 386);
             this.pipeBottom.Name = "pipeBottom";
             this.pipeBottom.Size = new System.Drawing.Size(134, 173);
             this.pipeBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -56,7 +57,7 @@
             // pipeTop
             // 
             this.pipeTop.Image = ((System.Drawing.Image)(resources.GetObject("pipeTop.Image")));
-            this.pipeTop.Location = new System.Drawing.Point(171, -1);
+            this.pipeTop.Location = new System.Drawing.Point(325, 0);
             this.pipeTop.Name = "pipeTop";
             this.pipeTop.Size = new System.Drawing.Size(134, 165);
             this.pipeTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -67,9 +68,9 @@
             // ground
             // 
             this.ground.Image = ((System.Drawing.Image)(resources.GetObject("ground.Image")));
-            this.ground.Location = new System.Drawing.Point(0, 460);
+            this.ground.Location = new System.Drawing.Point(0, 555);
             this.ground.Name = "ground";
-            this.ground.Size = new System.Drawing.Size(428, 75);
+            this.ground.Size = new System.Drawing.Size(627, 75);
             this.ground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ground.TabIndex = 2;
             this.ground.TabStop = false;
@@ -78,7 +79,7 @@
             // bird
             // 
             this.bird.Image = ((System.Drawing.Image)(resources.GetObject("bird.Image")));
-            this.bird.Location = new System.Drawing.Point(35, 188);
+            this.bird.Location = new System.Drawing.Point(35, 195);
             this.bird.Name = "bird";
             this.bird.Size = new System.Drawing.Size(118, 120);
             this.bird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -103,12 +104,25 @@
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // playAgain
+            // 
+            this.playAgain.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.playAgain.Location = new System.Drawing.Point(196, 233);
+            this.playAgain.Name = "playAgain";
+            this.playAgain.Size = new System.Drawing.Size(263, 147);
+            this.playAgain.TabIndex = 5;
+            this.playAgain.Text = "play again";
+            this.playAgain.UseVisualStyleBackColor = true;
+            this.playAgain.Visible = false;
+            this.playAgain.Click += new System.EventHandler(this.playAgain_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
-            this.ClientSize = new System.Drawing.Size(428, 534);
+            this.ClientSize = new System.Drawing.Size(625, 628);
+            this.Controls.Add(this.playAgain);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.bird);
             this.Controls.Add(this.ground);
@@ -136,6 +150,7 @@
         private System.Windows.Forms.PictureBox bird;
         private System.Windows.Forms.Label scoreLabel;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button playAgain;
     }
 }
 
